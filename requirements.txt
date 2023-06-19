@@ -1,0 +1,19 @@
+# -- Packages that should have been installed --
+# torch
+# torchvision
+# -- Packages that will be installed --
+pytorchvideo
+ffmpeg-python
+augly
+h5py
+numpy
+pandas
+tqdm
+opencv-python
+scikit-learn
+einops
+timm
+typer
+tensorboard
+seaborn
+imageio
