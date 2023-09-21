@@ -5,6 +5,10 @@ It contains code for the training of video similarity learning network with self
 Also, to facilitate the reproduction of the paper's results, the evaluation code, the extracted features for the 
 employed video datasets, and pre-trained models are provided.
 
+<p align="center">
+<img src="overview.png" width="70%"/>
+</p>
+
 ## Prerequisites
 * Python 3
 * PyTorch
