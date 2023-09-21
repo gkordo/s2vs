@@ -91,9 +91,34 @@ s2vs_dns = SimilarityNetwork['ViSiL'].get_model(pretrained='s2vs_dns')
 s2vs_vcdb = SimilarityNetwork['ViSiL'].get_model(pretrained='s2vs_vcdb')
 ```
 
+## Citation
+If you use this code for your research, please consider citing our papers:
+```bibtex
+@inproceedings{kordopatis2023s2vs,
+  title={Self-Supervised Video Similarity Learning},
+  author={Kordopatis-Zilos, Giorgos and Tolias, Giorgos and Tzelepis, Christos and Kompatsiaris, Ioannis and Patras, Ioannis and Papadopoulos, Symeon},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops},
+  year={2023}
+}
+
+@inproceedings{kordopatis2019visil,
+  title={{ViSiL}: Fine-grained Spatio-Temporal Video Similarity Learning},
+  author={Kordopatis-Zilos, Giorgos and Papadopoulos, Symeon and Patras, Ioannis and Kompatsiaris, Ioannis},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  year={2019}
+}
+```
+## Related Projects
+
+**[DnS](https://github.com/mever-team/distill-and-select)** - computational efficiency w/ selector network
+
+**[ViSiL](https://github.com/MKLab-ITI/visil)** - original ViSiL approach
+
+**[FIVR-200K](https://github.com/MKLab-ITI/FIVR-200K)** - download our FIVR-200K dataset
+
 ## License
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for 
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 
-## Contact for further details about the project
+## Contact for further details
 Giorgos Kordopatis-Zilos (kordogeo@fel.cvut.cz)
