@@ -6,7 +6,7 @@ Also, to facilitate the reproduction of the paper's results, the evaluation code
 employed video datasets, and pre-trained models are provided.
 
 <p align="center">
-<img src="overview.png" width="70%"/>
+<img src="overview.png" width="50%"/>
 </p>
 
 ## Prerequisites
@@ -53,7 +53,6 @@ $ bash scripts/train_ssl.sh
 
 ## Evaluation
 
-### Video Retrieval
 * Download the datasets from the original sources:
     * [FIVR-5K, FIVR-200K](https://ndd.iti.gr/fivr/) - Fine-grained Incident Video Retrieval ([features](https://mever.iti.gr/s2vs/features/fivr_5k.hdf5), [features](https://mever.iti.gr/s2vs/features/fivr_200k.hdf5))
     * [VCDB](https://fvl.fudan.edu.cn/dataset/vcdb/list.htm) - Video Copy Detection ([features](https://mever.iti.gr/s2vs/features/vcdb.hdf5))
