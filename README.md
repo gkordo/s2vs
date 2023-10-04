@@ -82,16 +82,15 @@ $ python evaluation.py --dataset FIVR-200K --dataset_hdf5 <path_to_hdf5> --model
 * If no value is given to the `--model_path` argument, then the pretrained `s2vs_dns` model is used.
 
 ## Use our pretrained models
-* Usage of the model is similar as in [ViSiL](https://github.com/MKLab-ITI/visil/tree/pytorch#use-visil-in-your-python-code) and [DnS](https://github.com/mever-team/distill-and-select#use-our-pretrained-models)
+* Usage of the model is similar to [DnS](https://github.com/mever-team/distill-and-select#use-our-pretrained-models) and [ViSiL](https://github.com/MKLab-ITI/visil/tree/pytorch#use-visil-in-your-python-code) 
 
 * Load our pretrained models as follows:
 ```python
-from model.feature_extractor import FeatureExtractor
-from model.similarity_network import SimilarityNetwork
+import torch
 
-feat_extractor = FeatureExtractor['RESNET'].get_model(dims=512)
-s2vs_dns = SimilarityNetwork['ViSiL'].get_model(pretrained='s2vs_dns')
-s2vs_vcdb = SimilarityNetwork['ViSiL'].get_model(pretrained='s2vs_vcdb')
+feat_extractor = torch.hub.load('gkordo/s2vs:main', 'resnet50_extractor')
+s2vs_dns = torch.hub.load('gkordo/s2vs:main', 's2vs_dns')
+s2vs_vcdb = torch.hub.load('gkordo/s2vs:main', 's2vs_vcdb')
 ```
 
 ## Citation
@@ -111,6 +110,7 @@ If you use this code for your research, please consider citing our papers:
   year={2019}
 }
 ```
+
 ## Related Projects
 
 **[DnS](https://github.com/mever-team/distill-and-select)** - computational efficiency w/ selector network
