@@ -88,7 +88,7 @@ $ python evaluation.py --dataset FIVR-200K --dataset_hdf5 <path_to_hdf5> --model
 ```python
 import torch
 
-feat_extractor = torch.hub.load('gkordo/s2vs:main', 'resnet50_extractor')
+feat_extractor = torch.hub.load('gkordo/s2vs:main', 'resnet50_LiMAC')
 s2vs_dns = torch.hub.load('gkordo/s2vs:main', 's2vs_dns')
 s2vs_vcdb = torch.hub.load('gkordo/s2vs:main', 's2vs_vcdb')
 ```
