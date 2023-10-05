@@ -4,7 +4,7 @@ from model.feature_extractor import FeatureExtractor
 dependencies = ["torch", "torchvision", "einops"]
 
 
-def resnet50_extractor(dims=512):
+def resnet50_LiMAC(dims=512):
     return FeatureExtractor['RESNET'].get_model(dims)
 
 
