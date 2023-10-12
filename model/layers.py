@@ -11,19 +11,20 @@ from model.constraints import L2Constrain
 
 class VideoNormalizer(nn.Module):
 
-    def __init__(self, ):
+    def __init__(self,
+                 mean=[0.485, 0.456, 0.406],
+                 std=[0.229, 0.224, 0.225]):
         super(VideoNormalizer, self).__init__()
         self.scale = nn.Parameter(torch.Tensor([255.]), requires_grad=False)
-        self.mean = nn.Parameter(torch.Tensor([0.45, 0.45, 0.45]), requires_grad=False)
-        self.std = nn.Parameter(torch.Tensor([0.225, 0.225, 0.225]), requires_grad=False)
+        self.mean = nn.Parameter(torch.Tensor(mean), requires_grad=False)
+        self.std = nn.Parameter(torch.Tensor(std), requires_grad=False)
 
     def forward(self, video):
         if video.dtype == torch.uint8:
-            print(video.dtype)
-            video = video.float()
+            video = video.float() / self.scale
         if video.shape[-1] != 3 and video.shape[1] == 3:
             video = video.permute(0, 2, 3, 1)
-        video = ((video / self.scale) - self.mean) / self.std
+        video = (video - self.mean) / self.std
         return video.permute(0, 3, 1, 2)
 
 
