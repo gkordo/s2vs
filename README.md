@@ -6,7 +6,7 @@ Also, to facilitate the reproduction of the paper's results, the evaluation code
 employed video datasets, and pre-trained models are provided.
 
 <p align="center">
-<img src="overview.png" width="50%"/>
+<img src="data/overview.png" width="50%"/>
 </p>
 
 ## Prerequisites
@@ -110,6 +110,9 @@ If you use this code for your research, please consider citing our papers:
   year={2019}
 }
 ```
+
+## Visualization
+* For several visualizations and model usage in code, see at [this Colab notebook](https://colab.research.google.com/drive/18vFs15sJZQ_MxePYRdwVeHUqcmF8Tlp0).
 
 ## Related Projects
 
