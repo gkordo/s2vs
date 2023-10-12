@@ -112,7 +112,8 @@ If you use this code for your research, please consider citing our papers:
 ```
 
 ## Visualization
-* For several visualizations and model usage in code, see at [this Colab notebook](https://colab.research.google.com/drive/18vFs15sJZQ_MxePYRdwVeHUqcmF8Tlp0).
+For visualization examples of augmentation and similarity matrices, as well as model usage in code, 
+have a look at [this Colab notebook](https://colab.research.google.com/drive/18vFs15sJZQ_MxePYRdwVeHUqcmF8Tlp0).
 
 ## Related Projects
 
