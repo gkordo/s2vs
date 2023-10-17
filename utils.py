@@ -139,7 +139,7 @@ def animate(frames, fps=1, save_file='./animation.gif'):
         frames = np.clip(frames * 255, 0, 255).astype(np.uint8)
     if not os.path.exists(os.path.dirname(save_file)):
         os.makedirs(os.path.dirname(save_file))
-    imageio.mimsave(save_file, frames, fps=fps)
+    imageio.mimsave(save_file, frames, fps=fps, loop=65535)
     with open(save_file,'rb') as f:
         display.display(display.Image(data=f.read()))
 
