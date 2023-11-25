@@ -53,10 +53,6 @@ class VCDB(object):
                         y_true.append(int(target in query_gt))
                         y_score.append(float(sim))
 
-        from sklearn.metrics import precision_recall_curve
-        precision, recall, thresholds = precision_recall_curve(y_true, y_score)
-        f1 = 2 * (precision * recall) / (precision + recall)
-        print(f1.max())
         return self.calculate_metric(y_true, y_score, gt_len)
 
     def evaluate(self, similarities, all_db=None, verbose=True):
